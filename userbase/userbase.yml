@@ -1,10 +1,23 @@
-example.property: "I AM IN THE DEFAULT userbase"
-spring.datasource.platform:  "postgres"
-spring.jpa.show-sql: "true"
-spring.database.driverClassName: "org.postgresql.Driver"
-spring.datasource.url: "jdbc:postgresql://localhost:3306/hereuser"
-spring.datasource.username: "postgres"
-spring.datasource.password: "123456"
-spring.datasource.testWhileIdle: "true"
-spring.datasource.validationQuery: "SELECT 1"
-spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+example.property: "I AM A PROD PROPERTY userbase.yml"
+
+server:
+  port: 8018
+
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hereuser?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: 123456
+    testWhileIdle: "true"
+    validationQuery: "SELECT 1"
+
+
+
+mybatis:
+  mapper-locations:
+    - classpath:com.userbase.mapper/*.xml
+  type-aliases-package: com.userbase.entity
+
