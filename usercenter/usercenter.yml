@@ -1,4 +1,5 @@
-example.property: "I AM A PROD PROPERTY usercenter.yml 002"
+example:
+  property: "I AM A PROD PROPERTY usercenter.yml 003"
 
 server:
   port: 8031
