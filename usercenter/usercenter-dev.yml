@@ -1,7 +1,7 @@
 example.property: "I AM A PROD PROPERTY usercenter-dev.yml"
 
 server:
-  port: 8032
+  port: 8031
 
 
 
