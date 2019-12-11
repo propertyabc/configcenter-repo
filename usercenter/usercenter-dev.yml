@@ -23,6 +23,19 @@ mybatis:
 
 
 
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://192.168.2.26:8761/eureka/
+
+
+
+
 management:
   server:
     port: 8041
