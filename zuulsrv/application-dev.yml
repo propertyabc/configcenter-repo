@@ -4,7 +4,7 @@ example:
 
 
 server:
-  port: 5555
+  port: 5555 # zuul 反向代理使用
 
 
 
@@ -27,6 +27,7 @@ eureka:
 
 
 
+
 management:
   endpoint:
     health:
@@ -40,7 +41,7 @@ management:
 
 zuul:
   prefix: /api # 所以已定义的服务，都将添加前缀 /api
-  routes:
+  routes: # 默认不用配置，会有自动映射
     usercenterservice:
       serviceId: usercenter
       path: /user/**
