@@ -1,0 +1,40 @@
+example:
+  property: "i am a default property zuulsrv.yml"
+
+
+
+server:
+  port: 5555
+
+
+
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://192.168.2.26:8761/eureka/
+
+
+
+zuul:
+  prefix: /api # 所以已定义的服务，都将添加前缀 /api
+  routes:
+    usercenterservice:
+      serviceId: usercenter
+      path: /user/**
+    productcenterservice:
+      serviceId: productcenter
+      path: /product/**
+
+
