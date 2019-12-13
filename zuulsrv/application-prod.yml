@@ -27,6 +27,19 @@ eureka:
 
 
 
+management:
+  server:
+    port: 8043
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*" #注意这里*要加引号，暴露全部，也可以只暴露相应endpoint
+
+
+
 zuul:
   prefix: /api # 所以已定义的服务，都将添加前缀 /api
   routes:
