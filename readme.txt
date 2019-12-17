@@ -5,4 +5,5 @@ zuulsrv
 	application-prod.yml
 
 
-application都会被默认重复加载的~~
+假如profiles.active: prod，服务从config server读取 application-prod.yml 后，还会重复加载默认的 application.yml
+解决办法：servername.yml servername-dev.yml servername-prod.yml
